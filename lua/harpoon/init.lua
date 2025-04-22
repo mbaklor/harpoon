@@ -157,7 +157,7 @@ function Harpoon.setup(self, partial_config)
             pattern = "*",
             callback = function(ev)
                 self:_for_each_list(function(list, config)
-                    local fn = config[ev.event]
+                    local fn = config["BufLeave"]
                     if fn ~= nil then
                         fn(ev, list)
                     end
